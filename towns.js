@@ -1,7 +1,18 @@
 $(document).ready(function() {
 	$('#btnDelete').click(deleteTown);
+<<<<<<< HEAD
 	$('#btnShuffle').click(shuffleTowns);
+=======
+	$('#btnAdd').click(addTown);
+>>>>>>> 89ac435d4ae14908274031cce5af2d2d1b8bdb0e
 });
+
+function addTown() {
+	let townName = $('#townNameForAdd').val();
+	$('#townNameForAdd').val('');
+	$('#towns').append($('<option>').text(townName));
+	$('#result').text(townName + " added.");
+}
 
 function deleteTown() {
 	let townName = $('#townName').val();
